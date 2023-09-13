@@ -34,8 +34,10 @@ This document provides detailed information about the Person API, including stan
   - Response Body:
     ```json
     {
-      "name": "string"
-    }
+    "name": "John Doe",
+    "user_id": 1
+}
+
     ```
 
 ### Modify Details of an Existing Person
@@ -83,4 +85,22 @@ Here are some sample usage scenarios for the API:
 ```bash
 
 curl -X POST -H "Content-Type: application/json" -d '{"name":"John Doe"}' http://localhost:5000/api
+
+### Fetch Person Details by Name
+
+**Request:**
+
+curl http://localhost:5000/api/John%20Doe
+
+### Modify Person Details by Name
+
+**Request**
+
+curl -X PUT -H "Content-Type: application/json" -d '{"name": "Updated Name"}' http://localhost:5000/api/John%20Doe
+
+### Remove a Person by Name
+
+**Request**
+
+curl -X DELETE http://localhost:5000/api/Updated%20Name
 
