@@ -43,7 +43,7 @@ def read_person(name):
     person = Person.query.filter_by(name=name).first()
     if person is None:
         return jsonify({'error': 'Person not found'}), 404
-    return jsonify({'name': person.name})
+    return jsonify({'name': person.name, 'user_id': person.user_id})
 
 # UPDATE: Modify details of an existing person by name
 @app.route('/api/<string:name>', methods=['PUT'])
