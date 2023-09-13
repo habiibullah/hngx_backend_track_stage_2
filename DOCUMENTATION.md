@@ -84,6 +84,3 @@ Here are some sample usage scenarios for the API:
 
 curl -X POST -H "Content-Type: application/json" -d '{"name":"John Doe"}' http://localhost:5000/api
 
-Known Limitations and Assumptions
-The API uses an SQLite database for simplicity. Consider using a more robust database in a production environment.
-Input validation only checks the "name" field for being a string. Additional validations can be added based on specific requirements.
